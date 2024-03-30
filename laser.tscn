@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_poopv"]
 
-[node name="Laser" type="Node2D"]
+[node name="Laser" type="Node2D" groups=["missile"]]
 script = ExtResource("1_2bi6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,7 +16,7 @@ texture = ExtResource("1_hahv1")
 position = Vector2(-5.68434e-14, 16)
 scale = Vector2(0.35, 0.35)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["missile"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("CircleShape2D_poopv")

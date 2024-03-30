@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpnktwp4vxwln"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_0sko3"]
+[ext_resource type="Texture2D" uid="uid://b062gfgtruqw4" path="res://Cavern.png" id="2_76x7r"]
+
+[node name="MainMenu" type="Node2D"]
+position = Vector2(108, 71)
+script = ExtResource("1_0sko3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(469, 254.5)
+scale = Vector2(1.28222, 1.07833)
+texture = ExtResource("2_76x7r")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 272.0
+offset_top = 42.0
+offset_right = 660.0
+offset_bottom = 184.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 273.0
+offset_top = 296.0
+offset_right = 661.0
+offset_bottom = 438.0
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]
