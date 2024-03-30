@@ -1,15 +1,18 @@
 extends Node2D
 
+@onready var player = $Player
 @onready var laser_container = $laserContainer
+@onready var heartsContainer = $CanvasLayer2/heartsContainer
 
-var player = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#player = get_tree().get_first_node_in_group("player")
+	
+	heartsContainer.setMaxHearts(5)
 	
 	player = $Player
 	assert(player!=null)
 	player.laser_shot.connect(_on_player_laser_shot)
+	player.healthChanged.connect(heartsContainer.decreaseHearts)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
