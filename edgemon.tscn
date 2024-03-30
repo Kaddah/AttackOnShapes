@@ -1,8 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://io3niliphey8"]
+[gd_scene load_steps=4 format=3 uid="uid://io3niliphey8"]
 
 [ext_resource type="Script" path="res://edgemon.gd" id="1_m64wx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4vrg8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iuikr"]
+radius = 17.0
 
 [node name="Edgemon" type="CharacterBody2D"]
 script = ExtResource("1_m64wx")
@@ -11,3 +14,8 @@ script = ExtResource("1_m64wx")
 shape = SubResource("CircleShape2D_4vrg8")
 
 [node name="Line2D" type="Line2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="hitBox" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_iuikr")

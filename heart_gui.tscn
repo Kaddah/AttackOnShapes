@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0kc60ai5yxq"]
+
+[ext_resource type="Script" path="res://heart_gui.gd" id="1_6nwcn"]
+[ext_resource type="Texture2D" uid="uid://cnjqgyf7s25fu" path="res://Bee_Pixel.png" id="1_s4mxs"]
+
+[node name="heartGUI" type="Panel"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_6nwcn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.18, 2.04)
+texture = ExtResource("1_s4mxs")
+centered = false

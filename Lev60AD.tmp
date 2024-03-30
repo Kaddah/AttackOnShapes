@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bk5j1s7u4g732"]
+[gd_scene load_steps=10 format=3 uid="uid://bk5j1s7u4g732"]
 
 [ext_resource type="Texture2D" uid="uid://b062gfgtruqw4" path="res://Cavern.png" id="1_g55kc"]
 [ext_resource type="Script" path="res://Level.gd" id="1_kqyt1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cqyihh66gn5wm" path="res://laser.tscn" id="4_djnwk"]
 [ext_resource type="PackedScene" uid="uid://io3niliphey8" path="res://edgemon.tscn" id="5_v63e5"]
 [ext_resource type="PackedScene" uid="uid://ddrmxgpu80nyw" path="res://hearts_container.tscn" id="7_2l1hv"]
+[ext_resource type="Script" path="res://HealthBar.gd" id="8_ylplj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80820"]
 size = Vector2(1201.5, 120.5)
@@ -49,6 +50,16 @@ position = Vector2(4, 670)
 
 [node name="Edgemon" parent="." instance=ExtResource("5_v63e5")]
 position = Vector2(716, 330)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 1010.0
+offset_top = 19.0
+offset_right = 1116.0
+offset_bottom = 57.0
+value = 100.0
+script = ExtResource("8_ylplj")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 

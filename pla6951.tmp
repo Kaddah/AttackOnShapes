@@ -27,7 +27,7 @@ position = Vector2(-24, 0)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
-position = Vector2(-2.98023e-08, 4)
+position = Vector2(-2.98024e-08, 5)
 rotation = -1.50388
 shape = SubResource("CapsuleShape2D_1t3n1")
 
