@@ -23,3 +23,4 @@ func _on_player_laser_shot(laser_scene, location, rotation):
 	laser.global_position = location
 	laser.rotation = rotation
 	laser_container.add_child(laser)
+
