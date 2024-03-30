@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bk5j1s7u4g732"]
 
-[ext_resource type="Texture2D" uid="uid://3kxiwe5tetvb" path="res://Spider.png" id="1_2dx2n"]
 [ext_resource type="Texture2D" uid="uid://b062gfgtruqw4" path="res://Cavern.png" id="1_g55kc"]
 [ext_resource type="Script" path="res://Level.gd" id="1_kqyt1"]
 [ext_resource type="PackedScene" uid="uid://do3secttstcx8" path="res://player.tscn" id="3_wm6mt"]
 [ext_resource type="PackedScene" uid="uid://cqyihh66gn5wm" path="res://laser.tscn" id="4_djnwk"]
+[ext_resource type="PackedScene" uid="uid://io3niliphey8" path="res://edgemon.tscn" id="5_v63e5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_80820"]
 size = Vector2(1201.5, 120.5)
@@ -19,12 +19,6 @@ script = ExtResource("1_kqyt1")
 position = Vector2(576, 319)
 scale = Vector2(1.29, 1.16667)
 texture = ExtResource("1_g55kc")
-
-[node name="Enemy" type="Sprite2D" parent="."]
-position = Vector2(59, 57)
-rotation = 5.6252
-scale = Vector2(2, 2)
-texture = ExtResource("1_2dx2n")
 
 [node name="Player" parent="." instance=ExtResource("3_wm6mt")]
 position = Vector2(262, 211)
@@ -51,3 +45,5 @@ shape = SubResource("RectangleShape2D_d6g1n")
 position = Vector2(139, 474)
 
 [node name="laserContainer" type="Node2D" parent="."]
+
+[node name="Edgemon" parent="." instance=ExtResource("5_v63e5")]
