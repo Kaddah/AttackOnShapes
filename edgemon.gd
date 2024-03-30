@@ -16,7 +16,7 @@ func _ready():
 	
 func generate() -> void:
 	var line2D: Line2D = $Line2D
-	var collisionPolygon2D: CollisionPolygon2D= $CollisionPolygon2D
+	var collisionPolygon2D: CollisionPolygon2D = $CollisionPolygon2D
 	var angle: float = (2 * PI) / edges
 	
 	line2D.clear_points()
