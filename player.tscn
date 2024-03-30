@@ -10,7 +10,11 @@ radius = 20.0
 radius = 11.9731
 height = 46.1645
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1t3n1"]
+radius = 11.9731
+height = 46.1645
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_1phul")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
