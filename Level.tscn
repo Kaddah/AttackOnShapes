@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk5j1s7u4g732"]
+
+[ext_resource type="Texture2D" uid="uid://3kxiwe5tetvb" path="res://Spider.png" id="1_2dx2n"]
+[ext_resource type="Texture2D" uid="uid://b062gfgtruqw4" path="res://Cavern.png" id="1_g55kc"]
+[ext_resource type="PackedScene" uid="uid://do3secttstcx8" path="res://player.tscn" id="3_wm6mt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 319)
+scale = Vector2(1.29, 1.16667)
+texture = ExtResource("1_g55kc")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+position = Vector2(59, 57)
+rotation = 5.6252
+scale = Vector2(2, 2)
+texture = ExtResource("1_2dx2n")
+
+[node name="Player" parent="." instance=ExtResource("3_wm6mt")]
+position = Vector2(262, 211)
