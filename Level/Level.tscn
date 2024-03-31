@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
 [ext_resource type="Texture2D" uid="uid://cn8qwih0d67bm" path="res://Assets/Cavern.png" id="1_phlie"]
-[ext_resource type="Script" path="res://Level/Level.gd" id="1_s7e46"]
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
@@ -41,13 +40,6 @@ offset_right = 633.0
 offset_bottom = 39.0
 text = "Digitier Text
 "
-
-[node name="MessageLabel" type="Label" parent="."]
-offset_left = 538.0
-offset_top = 16.0
-offset_right = 633.0
-offset_bottom = 39.0
-text = "Digitier Text"
 
 [node name="Ammo" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1, 1)
