@@ -54,5 +54,5 @@ func on_collide(body):
 		body.queue_free()
 		
 	if body.is_in_group("enemy"):
-		print("GameOver")
+		$DeathSound.playing = true
 		get_tree().change_scene_to_file("res://game_over.tscn")

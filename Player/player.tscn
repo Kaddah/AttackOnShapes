@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://baotbxeiw57ph"]
+[gd_scene load_steps=6 format=3 uid="uid://baotbxeiw57ph"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_48fxo"]
 [ext_resource type="Texture2D" uid="uid://cnkidk3wrip1h" path="res://Player/bee_attack.png" id="1_vyl1s"]
 [ext_resource type="AudioStream" uid="uid://b661hrs064vfo" path="res://Assets/bee_buzzaway-92041.mp3" id="3_3cull"]
+[ext_resource type="AudioStream" uid="uid://b0j1g8j2qhad4" path="res://Assets/death.mp3" id="4_5cexc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4n2nc"]
 size = Vector2(608, 1012.75)
@@ -24,3 +25,7 @@ shape = SubResource("RectangleShape2D_4n2nc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_3cull")
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5cexc")
+volume_db = 24.0
