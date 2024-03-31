@@ -12,7 +12,19 @@ const edgemonNames = [
 	"Pentamon",
 	"Hexamon",
 	"Heptamon",
-	"Octamon"
+	"Octamon",
+	"Enneamon",
+	"Decamon",
+	"Hendecamon",
+	"Dodecamon",
+	"Triskaidecamon",
+	"Tetrakaidecamon",
+	"Pentakaidecamon",
+	"Hexakaidecamon",
+	"Heptakaidecamon",
+	"Octakaidecamon",
+	"Enneakaidecamon",
+	"Icosamon"
 ]
 
 func _on_player_ammo_changed(amount):
@@ -41,4 +53,6 @@ func _display_evolve_message(edges: int):
 	messageTime = 8.0
 
 func getEdgemonName(edges : int):
-	return edgemonNames[edges]
+	if edges < edgemonNames.size():
+		return edgemonNames[edges]
+	return "Infimon"
