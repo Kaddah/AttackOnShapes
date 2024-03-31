@@ -3,11 +3,14 @@ extends Node2D
 @onready var player = $Player
 @onready var laser_container = $laserContainer
 @onready var heartsContainer = $CanvasLayer2/heartsContainer
+@onready var ammoContainer = $CanvasLayer/ammoContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	heartsContainer.setMaxHearts(5)
+	
+	ammoContainer.setMaxAmmo(3)
 	
 	player = $Player
 	assert(player!=null)

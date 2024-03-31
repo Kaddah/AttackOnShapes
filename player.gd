@@ -55,7 +55,7 @@ func _on_hurt_box_area_entered(area):
 		sendCollision()
 		if currentHealth < 0: 
 			currentHealth = maxHealth
-		print_debug(currentHealth)
+
 
 func sendCollision():
 
