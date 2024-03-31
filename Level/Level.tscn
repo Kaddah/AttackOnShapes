@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpr85yyhpxlnq"]
+[gd_scene load_steps=8 format=3 uid="uid://cpr85yyhpxlnq"]
 
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
+[ext_resource type="AudioStream" uid="uid://j6507nm1q2kb" path="res://Assets/Powerful-Trap-(chosic.com).mp3" id="7_nbqme"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_gbhj4")
@@ -52,6 +53,10 @@ scale = Vector2(0.03, 0.03)
 texture = ExtResource("5_h13py")
 expand_mode = 2
 stretch_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_nbqme")
+autoplay = true
 
 [connection signal="ammo_changed" from="Player" to="." method="_on_player_ammo_changed"]
 [connection signal="ammo_changed" from="Player" to="Player" method="_on_ammo_changed"]
