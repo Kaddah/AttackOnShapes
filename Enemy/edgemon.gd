@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: int = 100
+const SPEED: int = 75
 const RADIUS: int = 100
 var time:float = 0
 signal evolve
@@ -46,14 +46,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	# Pulse
-	const freq: int = 1
-	const amplitude: float = 0.5
+	const freq: int = 2
+	const amplitude: float = 0.3
 	time += delta
 	var s: float = sin(time * freq) * amplitude
 	scale = Vector2(1 + s, 1 + s)
 	
 	# Rotation
-	rotation += 0.01
+	rotation += 0.015
 	
 	# Chase player
 	var player_position = $"../Player".position
