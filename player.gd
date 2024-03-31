@@ -50,6 +50,7 @@ func handleCollisions():
 
 
 func _on_hurt_box_area_entered(area):
+	if !area.is_in_group("flower"):
 		currentHealth -= 1 
 		healthChangedVar = true
 		sendCollision()

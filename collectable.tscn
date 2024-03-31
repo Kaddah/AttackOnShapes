@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vweop"]
 size = Vector2(21, 23)
 
-[node name="Collectable" type="Area2D"]
+[node name="Collectable" type="Area2D" groups=["flower"]]
 script = ExtResource("1_usau7")
 
 [node name="Blume" type="Sprite2D" parent="."]
