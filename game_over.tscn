@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1nx2rbdpg2dc"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_yly5h"]
+[ext_resource type="Texture2D" uid="uid://d1xdcl6h1jt3e" path="res://Assets/Gameover.png" id="2_0m66j"]
+
+[node name="gameOver" type="CanvasLayer"]
+script = ExtResource("1_yly5h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 324)
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("2_0m66j")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 521.0
+offset_top = 125.0
+offset_right = -535.0
+offset_bottom = -498.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Over "
+
+[node name="exit" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 501.0
+offset_top = 213.0
+offset_right = -520.0
+offset_bottom = -411.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../retry")
+text = "Exit"
+
+[node name="retry" type="Button" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 501.0
+offset_top = 172.0
+offset_right = -520.0
+offset_bottom = -451.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_bottom = NodePath("../exit")
+text = "Retry"
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]

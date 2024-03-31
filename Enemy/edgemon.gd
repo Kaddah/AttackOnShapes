@@ -3,6 +3,7 @@ extends CharacterBody2D
 const SPEED: int = 0
 const RADIUS: int = 100
 var time:float = 0
+signal evolve
 
 var edges:int = 3:
 	set(value):
@@ -33,6 +34,7 @@ var health: int = 3:
 		health = value
 		print("health: ", health)
 		if health == 0:
+			evolve.emit(edges)
 			edges += 1
 
 var WeakPoint = preload("res://Enemy/weak_points.tscn")

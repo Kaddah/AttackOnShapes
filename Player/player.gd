@@ -54,3 +54,4 @@ func on_collide(body):
 		
 	if body.is_in_group("enemy"):
 		print("GameOver")
+		get_tree().change_scene_to_file("res://game_over.tscn")
