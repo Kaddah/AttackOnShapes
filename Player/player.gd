@@ -40,7 +40,7 @@ func _process(delta):
 		$AudioStreamPlayer.playing = true
 		ammo -= 1
 		var projectile = Projectile.instantiate() 
-		projectile.global_position = global_position
+		projectile.global_position = global_position + Vector2(12,12)
 		projectile.rotation = rotation
 		$"..".add_child(projectile)
 		
