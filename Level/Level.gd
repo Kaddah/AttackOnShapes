@@ -1,5 +1,12 @@
 extends Node2D
 
+const height = 2732
+const width = 2732
+
+func _on_player_ammo_changed(amount):
+	$Ammo.size = Vector2(width, amount * height + 1)
+extends Node2D
+
 var messageTime : float 
 
 # Called when the node enters the scene tree for the first time.

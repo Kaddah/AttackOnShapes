@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: int = 0
+const SPEED: int = 100
 const RADIUS: int = 100
 var time:float = 0
 signal evolve

@@ -6,5 +6,6 @@
 script = ExtResource("1_sf8sq")
 
 [node name="Line2D" type="Line2D" parent="."]
+default_color = Color(0.411765, 0.411765, 0.411765, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
