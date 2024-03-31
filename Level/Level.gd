@@ -5,7 +5,6 @@ const width = 2732
 
 func _on_player_ammo_changed(amount):
 	$Ammo.size = Vector2(width, amount * height + 1)
-extends Node2D
 
 var messageTime : float 
 
