@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://baotbxeiw57ph"]
+[gd_scene load_steps=5 format=3 uid="uid://baotbxeiw57ph"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_48fxo"]
 [ext_resource type="Texture2D" uid="uid://cnkidk3wrip1h" path="res://Player/bee_attack.png" id="1_vyl1s"]
+[ext_resource type="AudioStream" uid="uid://b661hrs064vfo" path="res://Assets/bee_buzzaway-92041.mp3" id="3_3cull"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4n2nc"]
 size = Vector2(608, 1012.75)
@@ -20,3 +21,6 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(125, -84)
 shape = SubResource("RectangleShape2D_4n2nc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3cull")
