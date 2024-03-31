@@ -49,7 +49,7 @@ func _process(delta):
 		
 	
 func _display_evolve_message(edges: int): 
-	$MessageLabel.text = "\"This isn't even my final form!\"s\n" + getEdgemonName(edges) + " evolves to " + getEdgemonName(edges + 1)
+	$MessageLabel.text = "\"This isn't even my final form!\"\n" + getEdgemonName(edges) + " evolves to " + getEdgemonName(edges + 1)
 	messageTime = 8.0
 
 func getEdgemonName(edges : int):

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
-[ext_resource type="Texture2D" uid="uid://cn8qwih0d67bm" path="res://Assets/Cavern.png" id="1_phlie"]
+[ext_resource type="Texture2D" uid="uid://buoirl106qwqf" path="res://Assets/background.png" id="2_v16pq"]
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
@@ -12,9 +12,9 @@
 script = ExtResource("1_gbhj4")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(577, 327.5)
-scale = Vector2(1.28, 1.085)
-texture = ExtResource("1_phlie")
+position = Vector2(576, 331)
+scale = Vector2(0.422401, 0.321289)
+texture = ExtResource("2_v16pq")
 
 [node name="Player" parent="." instance=ExtResource("1_27dxw")]
 position = Vector2(482, 266)
@@ -24,7 +24,7 @@ collision_mask = 28
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 build_mode = 1
-polygon = PackedVector2Array(3, 659, 1157, 655, 1155, 1, -3, 5)
+polygon = PackedVector2Array(-16, 677, 1172, 678, 1166, -15, -18, -21)
 
 [node name="Edgemon" parent="." instance=ExtResource("4_i1dke")]
 position = Vector2(847, 294)
