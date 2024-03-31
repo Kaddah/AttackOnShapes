@@ -37,6 +37,7 @@ func _process(delta):
 	if moving:
 		direction = Vector2.RIGHT.rotated(rotation) * SPEED * delta
 	elif Input.is_action_just_pressed("shoot") and ammo > 0:
+		$AudioStreamPlayer.playing = true
 		ammo -= 1
 		var projectile = Projectile.instantiate() 
 		projectile.global_position = global_position
