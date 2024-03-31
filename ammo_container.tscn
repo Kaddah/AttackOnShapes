@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://0u5qtxrhtqru"]
-
-[ext_resource type="Script" path="res://ammo_container.gd" id="1_yj33k"]
-
-[node name="Ammo_Container" type="HBoxContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 105
-script = ExtResource("1_yj33k")

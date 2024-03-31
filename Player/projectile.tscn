@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://njs2llm3mj5"]
+
+[ext_resource type="Script" path="res://Player/projectile.gd" id="1_6iqa5"]
+[ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="2_ddyma"]
+
+[node name="Projectile" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 17
+script = ExtResource("1_6iqa5")
+
+[node name="Sting" type="Sprite2D" parent="."]
+position = Vector2(3, 2)
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_ddyma")
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.01, 0.01)
+polygon = PackedVector2Array(-400, 300, -200, -400, 800, 100)

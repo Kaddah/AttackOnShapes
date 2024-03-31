@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cds3cqnouvjfs"]
+
+[ext_resource type="Script" path="res://Enemy/edgemon.gd" id="1_sf8sq"]
+
+[node name="Edgemon" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_sf8sq")
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
