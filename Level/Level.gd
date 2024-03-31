@@ -22,6 +22,7 @@ var messageTime : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Ammo.size = Vector2(width, $Player.ammo * height + 1)
 	messageTime = 5.0
 	$MessageLabel.text = "Defeat the " + getEdgemonName(3)
 	$Edgemon.evolve.connect(_display_evolve_message)
