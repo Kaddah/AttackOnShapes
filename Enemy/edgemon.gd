@@ -26,7 +26,7 @@ var edges:int = 3:
 			add_child(weak_point)
 			
 		line2D.add_point(line2D.get_point_position(0))
-		$CollisionPolygon2D.polygon = PackedVector2Array(points)
+		#$CollisionPolygon2D.polygon = PackedVector2Array(points)
 		print(points)
 		
 var health: int = 3: 
@@ -47,7 +47,7 @@ func _ready():
 func _process(delta):
 	# Pulse
 	const freq: int = 2
-	const amplitude: float = 0.3
+	const amplitude: float = 0.6
 	time += delta
 	var s: float = sin(time * freq) * amplitude
 	scale = Vector2(1 + s, 1 + s)

@@ -24,13 +24,13 @@ collision_mask = 28
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 build_mode = 1
-polygon = PackedVector2Array(-16, 677, 1172, 678, 1166, -15, -18, -21)
+polygon = PackedVector2Array(-40, 705, 1205, 705, 1196, -38, -44, -38)
 
 [node name="Edgemon" parent="." instance=ExtResource("4_i1dke")]
 position = Vector2(847, 294)
 
 [node name="FlowerSpawner" type="Timer" parent="."]
-wait_time = 3.68
+wait_time = 3.0
 autostart = true
 script = ExtResource("4_nu5bk")
 
