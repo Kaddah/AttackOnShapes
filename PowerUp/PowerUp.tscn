@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3gynmjm5iwe3"]
+
+[ext_resource type="Texture2D" uid="uid://cl56f6uffmyfr" path="res://Assets/Ultschinator.png" id="1_c4s8j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exloi"]
+
+[node name="PowerUp" type="StaticBody2D" groups=["PowerUp"]]
+collision_layer = 2
+collision_mask = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(0.043, 0.05)
+texture = ExtResource("1_c4s8j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_exloi")
