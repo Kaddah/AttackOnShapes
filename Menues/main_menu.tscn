@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://byq8kmoago4yx"]
+
+[ext_resource type="Script" path="res://Menues/main_menu.gd" id="1_bqgjo"]
+[ext_resource type="Texture2D" uid="uid://dpwgwjlgwogyv" path="res://Assets/Main_Menu.png" id="1_eqp1r"]
+
+[node name="main_menu" type="CanvasLayer"]
+script = ExtResource("1_bqgjo")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(578, 326)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_eqp1r")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 240.0
+offset_right = 705.0
+offset_bottom = 298.0
+text = "Play"
+
+[node name="Highscore" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 320.0
+offset_right = 705.0
+offset_bottom = 378.0
+text = "Highscore"
+
+[node name="Tutorial" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 400.0
+offset_right = 705.0
+offset_bottom = 458.0
+text = "Tutorial"
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 480.0
+offset_right = 705.0
+offset_bottom = 538.0
+text = "Exit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Highscore" to="." method="_on_highscore_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

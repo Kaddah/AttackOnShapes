@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://x0phk1qrds74"]
+
+[ext_resource type="Texture2D" uid="uid://cnnsvoxigd5xo" path="res://Assets/Highscore.png" id="1_gt0fe"]
+[ext_resource type="Script" path="res://Menues/highscore.gd" id="1_vv4xy"]
+
+[node name="highscore" type="CanvasLayer"]
+scale = Vector2(0.3, 0.3)
+transform = Transform2D(0.3, 0, 0, 0.3, 0, 0)
+script = ExtResource("1_vv4xy")
+
+[node name="Highscore" type="Sprite2D" parent="."]
+position = Vector2(1920, 1080)
+texture = ExtResource("1_gt0fe")
+
+[node name="back" type="Button" parent="."]
+offset_left = 1506.67
+offset_top = 1813.33
+offset_right = 2039.67
+offset_bottom = 1953.33
+text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
