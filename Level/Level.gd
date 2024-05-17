@@ -2,6 +2,7 @@ extends Node2D
 
 const height = 2732
 const width = 2732
+var score = 0
 
 const edgemonNames = [
 	"Nilmon",
@@ -34,6 +35,8 @@ var messageTime : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$HighscoreLabel.visible = true
+	
 	$Ammo.size = Vector2(width, $Player.ammo * height + 1)
 	messageTime = 5.0
 	$MessageLabel.text = "Defeat the " + getEdgemonName(3)
@@ -51,6 +54,9 @@ func _process(delta):
 func _display_evolve_message(edges: int): 
 	$MessageLabel.text = "\"This isn't even my final form!\"\n" + getEdgemonName(edges) + " evolves to " + getEdgemonName(edges + 1)
 	messageTime = 8.0
+	
+	score += 10
+	$HighscoreLabel.text = str(score) 
 
 func getEdgemonName(edges : int):
 	if edges < edgemonNames.size():
