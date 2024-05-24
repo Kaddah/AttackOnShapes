@@ -89,7 +89,7 @@ func on_collide(body):
 		
 	if body.is_in_group("enemy"):
 		$DeathSound.playing = true
-		get_tree().change_scene_to_file("res://game_over.tscn")
+		get_tree().change_scene_to_file("res://Menues/game_over.tscn")
 
 
 func _on_double_speed_timeout():
