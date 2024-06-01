@@ -33,4 +33,11 @@ volume_db = 24.0
 [node name="DoubleSpeed" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="DoubleHealth" type="Timer" parent="."]
+wait_time = 1262.04
+
+[node name="CollissionTimer" type="Timer" parent="."]
+
 [connection signal="timeout" from="DoubleSpeed" to="." method="_on_double_speed_timeout"]
+[connection signal="timeout" from="DoubleHealth" to="." method="_on_double_health_timeout"]
+[connection signal="timeout" from="CollissionTimer" to="." method="_on_collission_timer_timeout"]

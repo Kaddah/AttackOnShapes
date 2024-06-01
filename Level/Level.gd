@@ -62,3 +62,7 @@ func getEdgemonName(edges : int):
 	if edges < edgemonNames.size():
 		return edgemonNames[edges]
 	return "Infimon"
+
+
+func _on_power_up_health_spawner_timeout():
+	pass # Replace with function body.

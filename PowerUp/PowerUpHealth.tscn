@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45onrrbel31y"]
+
+[ext_resource type="Texture2D" uid="uid://blp3dtkmp08tv" path="res://Assets/HealthBlume.png" id="1_c3bip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exloi"]
+
+[node name="PowerUp" type="StaticBody2D" groups=["PowerUpHealth"]]
+collision_layer = 2
+collision_mask = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 1.90735e-06)
+scale = Vector2(0.0224766, 0.0240234)
+texture = ExtResource("1_c3bip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_exloi")

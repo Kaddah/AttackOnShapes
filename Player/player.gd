@@ -3,10 +3,10 @@ extends CharacterBody2D
 var SPEED = 300.0
 
 var Projectile = preload("res://Player/projectile.tscn")
-
+var health = 1
 var bee_fly = preload("res://Player/bee_fly.png")
 var bee_attack = preload("res://Player/bee_attack.png")
-
+var collission = true
 signal ammo_changed(amount:int)
 var ammo:int = 3 :
 	set(value):
@@ -75,22 +75,38 @@ func doubleShot():
 	
 
 func on_collide(body):
-	if body.is_in_group("flower"):
-		ammo += 1
-		body.queue_free()
-		
-	if body.is_in_group("PowerUp"):
-		ammo += 2
-		SPEED *= 2
-		if Input.is_action_just_pressed("shoot") and ammo > 1:
-			doubleShot()
-		$DoubleSpeed.start()
-		body.queue_free()
-		
-	if body.is_in_group("enemy"):
-		$DeathSound.playing = true
-		get_tree().change_scene_to_file("res://Menues/game_over.tscn")
+	if collission == true:
+		if body.is_in_group("flower"):
+			ammo += 1
+			body.queue_free()
+			
+		if body.is_in_group("PowerUpSpeed"):
+			ammo += 2
+			SPEED *= 2
+			if Input.is_action_just_pressed("shoot") and ammo > 1:
+				doubleShot()
+			$DoubleSpeed.start()
+			body.queue_free()
+		if body.is_in_group("PowerUpHealth"):
+			health = 2
+			$DoubleHealth.start()
+			ammo += 2
+			body.queue_free()
+			
+			
+		if body.is_in_group("enemy") :
+			if health == 1:
+				$DeathSound.playing = true
+				get_tree().change_scene_to_file("res://Menues/game_over.tscn")
+			else:
+				health -= 1
+				collission = false
+				$CollissionTimer.start()
 
 
 func _on_double_speed_timeout():
 	SPEED = 300
+func _on_double_health_timeout():
+	health = 1
+func _on_collission_timer_timeout():
+	collission = true
