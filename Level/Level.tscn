@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
-[ext_resource type="Texture2D" uid="uid://buoirl106qwqf" path="res://Assets/background.png" id="2_v16pq"]
+[ext_resource type="Texture2D" uid="uid://dlpobo54heg5k" path="res://Assets/kaddah Background.png" id="2_rpjpn"]
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
@@ -15,9 +15,9 @@
 script = ExtResource("1_gbhj4")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576, 331)
-scale = Vector2(0.422401, 0.321289)
-texture = ExtResource("2_v16pq")
+position = Vector2(577.5, 324.5)
+scale = Vector2(0.642299, 0.635742)
+texture = ExtResource("2_rpjpn")
 
 [node name="Player" parent="." instance=ExtResource("1_27dxw")]
 position = Vector2(482, 266)
