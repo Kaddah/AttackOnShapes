@@ -1,23 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpr85yyhpxlnq"]
+[gd_scene load_steps=9 format=3 uid="uid://cpr85yyhpxlnq"]
 
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
-[ext_resource type="Texture2D" uid="uid://dlpobo54heg5k" path="res://Assets/kaddah Background.png" id="2_rpjpn"]
+[ext_resource type="Texture2D" uid="uid://buoirl106qwqf" path="res://Assets/background.png" id="2_v16pq"]
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
-[ext_resource type="Script" path="res://Level/Highscore.gd" id="6_7iqn1"]
 [ext_resource type="AudioStream" uid="uid://j6507nm1q2kb" path="res://Assets/Powerful-Trap-(chosic.com).mp3" id="7_nbqme"]
 [ext_resource type="Script" path="res://Level/PowerUpSpawner.gd" id="8_g6gty"]
-[ext_resource type="Script" path="res://Level/PowerUpHealthSpawner.gd" id="10_pk521"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_gbhj4")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(577.5, 324.5)
-scale = Vector2(0.642299, 0.635742)
-texture = ExtResource("2_rpjpn")
+position = Vector2(576, 331)
+scale = Vector2(0.422401, 0.321289)
+texture = ExtResource("2_v16pq")
 
 [node name="Player" parent="." instance=ExtResource("1_27dxw")]
 position = Vector2(482, 266)
@@ -33,7 +31,7 @@ polygon = PackedVector2Array(-40, 705, 1205, 705, 1196, -38, -44, -38)
 position = Vector2(847, 294)
 
 [node name="FlowerSpawner" type="Timer" parent="."]
-wait_time = 3.385
+wait_time = 3.0
 autostart = true
 script = ExtResource("4_nu5bk")
 
@@ -52,7 +50,6 @@ offset_right = 1132.0
 offset_bottom = 39.0
 text = "Score
 "
-script = ExtResource("6_7iqn1")
 
 [node name="Ammo" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1, 1)
@@ -71,18 +68,12 @@ stream = ExtResource("7_nbqme")
 volume_db = -2.811
 autoplay = true
 
-[node name="PowerUpSpeedSpawner" type="Timer" parent="."]
-wait_time = 4.314
+[node name="PowerUpSpawner" type="Timer" parent="."]
+wait_time = 3.0
 autostart = true
 script = ExtResource("8_g6gty")
-
-[node name="PowerUpHealthSpawner" type="Timer" parent="."]
-wait_time = 4.311
-autostart = true
-script = ExtResource("10_pk521")
 
 [connection signal="ammo_changed" from="Player" to="." method="_on_player_ammo_changed"]
 [connection signal="ammo_changed" from="Player" to="Player" method="_on_ammo_changed"]
 [connection signal="timeout" from="FlowerSpawner" to="FlowerSpawner" method="_on_timeout"]
-[connection signal="timeout" from="PowerUpSpeedSpawner" to="PowerUpSpeedSpawner" method="_on_timeout"]
-[connection signal="timeout" from="PowerUpHealthSpawner" to="PowerUpHealthSpawner" method="_on_timeout"]
+[connection signal="timeout" from="PowerUpSpawner" to="PowerUpSpawner" method="_on_timeout"]

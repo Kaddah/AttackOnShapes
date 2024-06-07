@@ -15,22 +15,23 @@ texture = ExtResource("2_ogccm")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 521.0
-offset_top = 125.0
-offset_right = -535.0
-offset_bottom = -498.0
+offset_left = 206.0
+offset_top = 35.0
+offset_right = -714.0
+offset_bottom = -521.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 35
 text = "Game Over "
 
 [node name="exit" type="Button" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 501.0
-offset_top = 213.0
-offset_right = -520.0
-offset_bottom = -411.0
+offset_left = 213.0
+offset_top = 174.0
+offset_right = -808.0
+offset_bottom = -438.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_top = NodePath("../retry")
@@ -40,14 +41,37 @@ text = "Exit"
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 501.0
-offset_top = 172.0
-offset_right = -520.0
-offset_bottom = -451.0
+offset_left = 212.0
+offset_top = 122.0
+offset_right = -809.0
+offset_bottom = -490.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_bottom = NodePath("../exit")
 text = "Retry"
 
+[node name="name" type="LineEdit" parent="."]
+offset_left = 212.0
+offset_top = 267.0
+offset_right = 506.0
+offset_bottom = 303.0
+placeholder_text = "Enter your name here ..."
+
+[node name="save" type="Button" parent="."]
+offset_left = 516.0
+offset_top = 267.0
+offset_right = 648.0
+offset_bottom = 303.0
+text = "save"
+
+[node name="score" type="Label" parent="."]
+offset_left = 214.0
+offset_top = 238.0
+offset_right = 428.0
+offset_bottom = 268.0
+text = "Your score: "
+
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="save" to="save" method="is_pressed"]
