@@ -82,7 +82,7 @@ func on_collide(body):
 			
 		if body.is_in_group("PowerUpSpeed"):
 			ammo += 2
-			SPEED *= 2
+			SPEED = 600
 			if Input.is_action_just_pressed("shoot") and ammo > 1:
 				doubleShot()
 			$DoubleSpeed.start()
