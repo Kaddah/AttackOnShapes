@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpr85yyhpxlnq"]
+[gd_scene load_steps=9 format=3 uid="uid://cpr85yyhpxlnq"]
 
 [ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="1_27dxw"]
 [ext_resource type="Script" path="res://Level/Level.gd" id="1_gbhj4"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="4_i1dke"]
 [ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_nu5bk"]
 [ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_h13py"]
-[ext_resource type="Script" path="res://Level/Highscore.gd" id="6_7iqn1"]
 [ext_resource type="AudioStream" uid="uid://j6507nm1q2kb" path="res://Assets/Powerful-Trap-(chosic.com).mp3" id="7_nbqme"]
 [ext_resource type="Script" path="res://Level/PowerUpSpawner.gd" id="8_g6gty"]
 
@@ -51,7 +50,6 @@ offset_right = 1132.0
 offset_bottom = 39.0
 text = "Score
 "
-script = ExtResource("6_7iqn1")
 
 [node name="Ammo" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1, 1)

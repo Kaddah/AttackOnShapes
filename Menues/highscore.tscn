@@ -12,11 +12,52 @@ script = ExtResource("1_vv4xy")
 position = Vector2(1920, 1080)
 texture = ExtResource("1_gt0fe")
 
-[node name="back" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="."]
 offset_left = 1506.67
 offset_top = 1813.33
 offset_right = 2039.67
 offset_bottom = 1953.33
+theme_override_font_sizes/font_size = 60
 text = "Back"
 
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[node name="Label1" type="Label" parent="."]
+offset_left = 1326.67
+offset_top = 593.334
+offset_right = 2309.67
+offset_bottom = 758.334
+theme_override_font_sizes/font_size = 120
+text = "1. "
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1326.67
+offset_top = 783.334
+offset_right = 2309.67
+offset_bottom = 948.334
+theme_override_font_sizes/font_size = 120
+text = "2. "
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 1326.67
+offset_top = 973.334
+offset_right = 2309.67
+offset_bottom = 1138.33
+theme_override_font_sizes/font_size = 120
+text = "3. "
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 1326.67
+offset_top = 1156.67
+offset_right = 2309.67
+offset_bottom = 1321.67
+theme_override_font_sizes/font_size = 120
+text = "4. "
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 1333.33
+offset_top = 1340.0
+offset_right = 2316.33
+offset_bottom = 1505.0
+theme_override_font_sizes/font_size = 120
+text = "5. "
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

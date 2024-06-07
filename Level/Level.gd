@@ -2,7 +2,7 @@ extends Node2D
 
 const height = 2732
 const width = 2732
-var score = 0
+
 
 const edgemonNames = [
 	"Nilmon",
@@ -55,8 +55,8 @@ func _display_evolve_message(edges: int):
 	$MessageLabel.text = "\"This isn't even my final form!\"\n" + getEdgemonName(edges) + " evolves to " + getEdgemonName(edges + 1)
 	messageTime = 8.0
 	
-	score += 10
-	$HighscoreLabel.text = str(score) 
+	Globals.score += 10
+	$HighscoreLabel.text = str(Globals.score) 
 
 func getEdgemonName(edges : int):
 	if edges < edgemonNames.size():
