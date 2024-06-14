@@ -4,7 +4,7 @@ const SPEED: int = 75
 const RADIUS: int = 100
 var time:float = 0
 signal evolve
-var level
+var level = 2
 
 
 var edges:int = 3:
@@ -36,7 +36,7 @@ var health: int = 3:
 		health = value
 		print("health: ", health)
 		if health == 0:
-			if level != 2:
+			if  get_tree().get_current_scene().get_name() == "level2":
 			
 				evolve.emit(edges)
 				edges += 1
@@ -72,5 +72,4 @@ func on_weak_point_destroyed(weak_point):
 	
 
 
-func _on_level_2_pressed():
-	level = 2
+ 
