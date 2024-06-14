@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2vs2cohhlwh6"]
+
+[ext_resource type="Texture2D" uid="uid://buoirl106qwqf" path="res://Assets/background.png" id="1_ggg1y"]
+[ext_resource type="Script" path="res://Level/level_2.gd" id="1_hfk6e"]
+[ext_resource type="PackedScene" uid="uid://baotbxeiw57ph" path="res://Player/player.tscn" id="2_irmh1"]
+[ext_resource type="PackedScene" uid="uid://cds3cqnouvjfs" path="res://Enemy/edgemon.tscn" id="3_dllur"]
+[ext_resource type="Script" path="res://Level/FlowerSpawner.gd" id="4_jo2u7"]
+[ext_resource type="Texture2D" uid="uid://dg2dottn5jloh" path="res://Player/sting.png" id="5_pdl64"]
+[ext_resource type="AudioStream" uid="uid://j6507nm1q2kb" path="res://Assets/Powerful-Trap-(chosic.com).mp3" id="6_5j3dg"]
+[ext_resource type="Script" path="res://Level/PowerUpSpawner.gd" id="7_wqiwk"]
+[ext_resource type="Script" path="res://Level/PowerUpHealthSpawner.gd" id="8_vnes3"]
+
+[node name="Level2" type="Node2D" groups=["level2"]]
+script = ExtResource("1_hfk6e")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 331)
+scale = Vector2(0.422401, 0.321289)
+texture = ExtResource("1_ggg1y")
+
+[node name="Player" parent="." instance=ExtResource("2_irmh1")]
+position = Vector2(482, 266)
+
+[node name="Wall" type="StaticBody2D" parent="." groups=["wall"]]
+collision_mask = 28
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
+build_mode = 1
+polygon = PackedVector2Array(-40, 705, 1205, 705, 1196, -38, -44, -38)
+
+[node name="Edgemon" parent="." instance=ExtResource("3_dllur")]
+position = Vector2(847, 294)
+
+[node name="FlowerSpawner" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+script = ExtResource("4_jo2u7")
+
+[node name="MessageLabel" type="Label" parent="."]
+offset_left = 538.0
+offset_top = 16.0
+offset_right = 633.0
+offset_bottom = 39.0
+text = "Digitier Text
+"
+
+[node name="HighscoreLabel" type="Label" parent="."]
+offset_left = 1054.0
+offset_top = 16.0
+offset_right = 1132.0
+offset_bottom = 39.0
+text = "Score
+"
+
+[node name="Ammo" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1, 1)
+offset_left = -1.0
+offset_top = 65.0
+offset_right = 2731.0
+offset_bottom = 10065.0
+rotation = -1.5708
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("5_pdl64")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5j3dg")
+volume_db = -2.811
+autoplay = true
+
+[node name="PowerUpSpeedSpawner" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+script = ExtResource("7_wqiwk")
+
+[node name="PowerUpHealthSpawner" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+script = ExtResource("8_vnes3")
+
+[connection signal="ammo_changed" from="Player" to="Player" method="_on_ammo_changed"]
+[connection signal="timeout" from="FlowerSpawner" to="FlowerSpawner" method="_on_timeout"]
+[connection signal="timeout" from="PowerUpSpeedSpawner" to="PowerUpSpeedSpawner" method="_on_timeout"]
+[connection signal="timeout" from="PowerUpHealthSpawner" to="PowerUpHealthSpawner" method="_on_timeout"]

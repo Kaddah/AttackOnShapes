@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3xbitfd3yu36"]
+
+[ext_resource type="Script" path="res://Menues/LevelMenu.gd" id="1_i0k1c"]
+[ext_resource type="Texture2D" uid="uid://dpwgwjlgwogyv" path="res://Assets/Main_Menu.png" id="2_1w32c"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_i0k1c")
+
+[node name="MainMenu" type="Sprite2D" parent="."]
+position = Vector2(578, 326)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_1w32c")
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 480.0
+offset_right = 705.0
+offset_bottom = 538.0
+text = "Exit"
+
+[node name="Level 1" type="Button" parent="."]
+offset_left = 505.0
+offset_top = 226.0
+offset_right = 705.0
+offset_bottom = 294.0
+text = "Level 1
+"
+
+[node name="Level 2" type="Button" parent="."]
+offset_left = 509.0
+offset_top = 320.0
+offset_right = 707.0
+offset_bottom = 385.0
+text = "Level 2
+"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level 2" to="." method="_on_level_2_pressed"]

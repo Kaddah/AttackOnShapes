@@ -4,6 +4,8 @@ const SPEED: int = 75
 const RADIUS: int = 100
 var time:float = 0
 signal evolve
+var level
+
 
 var edges:int = 3:
 	set(value):
@@ -34,8 +36,13 @@ var health: int = 3:
 		health = value
 		print("health: ", health)
 		if health == 0:
-			evolve.emit(edges)
-			edges += 1
+			if level != 2:
+			
+				evolve.emit(edges)
+				edges += 1
+			else:
+				get_tree().change_scene_to_file("res://Menues/WinMenu.tscn")
+			
 
 var WeakPoint = preload("res://Enemy/weak_points.tscn")
 
@@ -63,3 +70,7 @@ func _process(delta):
 func on_weak_point_destroyed(weak_point):
 	health -= 1
 	
+
+
+func _on_level_2_pressed():
+	level = 2

@@ -9,3 +9,13 @@ script = ExtResource("1_sf8sq")
 default_color = Color(0.411765, 0.411765, 0.411765, 1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="Level 2" type="Button" parent="."]
+offset_left = 1865.0
+offset_top = 1256.0
+offset_right = 2063.0
+offset_bottom = 1321.0
+text = "Level 2
+"
+
+[connection signal="pressed" from="Level 2" to="." method="_on_level_2_pressed"]
