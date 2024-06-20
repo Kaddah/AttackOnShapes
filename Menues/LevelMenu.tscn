@@ -16,7 +16,8 @@ offset_left = 501.0
 offset_top = 480.0
 offset_right = 705.0
 offset_bottom = 538.0
-text = "Exit"
+text = "Back
+"
 
 [node name="Level 1" type="Button" parent="."]
 offset_left = 505.0

@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_exit_pressed():
-	get_tree().quit()# Replace with function body.
+	get_tree().change_scene_to_file("res://Menues/main_menu.tscn")# Replace with function body.
 
 
 func _on_level_1_pressed():
