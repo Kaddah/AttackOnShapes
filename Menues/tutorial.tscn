@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://jmn0fglp8k0a"]
 
-[ext_resource type="Texture2D" uid="uid://dsea6d0lnhur2" path="res://Assets/Tutorial.png" id="1_fnsl0"]
 [ext_resource type="Script" path="res://Menues/tutorial.gd" id="1_nmm8e"]
+[ext_resource type="Texture2D" uid="uid://t70bkvgdjsr0" path="res://Assets/Tutorial_new.jpg" id="2_raoli"]
 
 [node name="Tutorial" type="CanvasLayer"]
 script = ExtResource("1_nmm8e")
@@ -9,7 +9,7 @@ script = ExtResource("1_nmm8e")
 [node name="Tutorial" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_fnsl0")
+texture = ExtResource("2_raoli")
 
 [node name="Back" type="Button" parent="."]
 offset_left = 514.0
