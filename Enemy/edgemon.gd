@@ -35,9 +35,10 @@ var health: int = 3:
 	set(value):
 		health = value
 		print("health: ", health)
+		print ("level :", get_tree().get_current_scene().get_name())
 		if health == 0:
-			if  get_tree().get_current_scene().get_name() == "level2":
-			
+			if  get_tree().get_current_scene().get_name() == "Level":
+				print ("level :", get_tree().get_current_scene().get_name())
 				evolve.emit(edges)
 				edges += 1
 			else:

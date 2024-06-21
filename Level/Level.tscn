@@ -32,7 +32,7 @@ polygon = PackedVector2Array(-40, 705, 1205, 705, 1196, -38, -44, -38)
 position = Vector2(847, 294)
 
 [node name="FlowerSpawner" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.66
 autostart = true
 script = ExtResource("4_nu5bk")
 
@@ -70,12 +70,12 @@ volume_db = -2.811
 autoplay = true
 
 [node name="PowerUpSpeedSpawner" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.356
 autostart = true
 script = ExtResource("8_g6gty")
 
 [node name="PowerUpHealthSpawner" type="Timer" parent="PowerUpSpeedSpawner"]
-wait_time = 3.0
+wait_time = 3.385
 autostart = true
 script = ExtResource("9_s58c7")
 
