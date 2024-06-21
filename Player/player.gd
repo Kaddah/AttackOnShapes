@@ -81,7 +81,7 @@ func on_collide(body):
 			body.queue_free()
 			
 		if body.is_in_group("PowerUpSpeed"):
-			ammo += 2
+			#ammo += 2
 			SPEED = 600
 			if Input.is_action_just_pressed("shoot") and ammo > 1:
 				doubleShot()
@@ -90,7 +90,7 @@ func on_collide(body):
 		if body.is_in_group("PowerUpHealth"):
 			health = 2
 			$DoubleHealth.start()
-			ammo += 2
+			#ammo += 2
 			body.queue_free()
 			
 			
