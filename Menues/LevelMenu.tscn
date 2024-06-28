@@ -24,7 +24,7 @@ offset_left = 505.0
 offset_top = 226.0
 offset_right = 705.0
 offset_bottom = 294.0
-text = "Level 1
+text = "Endless
 "
 
 [node name="Level 2" type="Button" parent="."]
@@ -32,7 +32,7 @@ offset_left = 509.0
 offset_top = 320.0
 offset_right = 707.0
 offset_bottom = 385.0
-text = "Level 2
+text = "Level 1
 "
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
