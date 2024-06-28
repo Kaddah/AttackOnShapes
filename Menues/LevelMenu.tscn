@@ -12,10 +12,11 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_1w32c")
 
 [node name="Exit" type="Button" parent="."]
-offset_left = 501.0
+offset_left = 505.0
 offset_top = 480.0
 offset_right = 705.0
-offset_bottom = 538.0
+offset_bottom = 548.0
+focus_neighbor_top = NodePath("../Level 2")
 text = "Back
 "
 
@@ -24,14 +25,17 @@ offset_left = 505.0
 offset_top = 226.0
 offset_right = 705.0
 offset_bottom = 294.0
+focus_neighbor_bottom = NodePath("../Level 2")
 text = "Endless
 "
 
 [node name="Level 2" type="Button" parent="."]
-offset_left = 509.0
+offset_left = 505.0
 offset_top = 320.0
-offset_right = 707.0
-offset_bottom = 385.0
+offset_right = 705.0
+offset_bottom = 388.0
+focus_neighbor_top = NodePath("../Level 1")
+focus_neighbor_bottom = NodePath("../Exit")
 text = "Level 1
 "
 

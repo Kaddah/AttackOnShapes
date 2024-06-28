@@ -5,6 +5,7 @@ const LABELS_COUNT = 5
 var highscore_labels = []  # Liste für die einzelnen Label-Knoten
 
 func _ready():
+	$BackButton.grab_focus()
 	# Sammeln der Label-Knoten
 	for i in range(1, LABELS_COUNT + 1):
 		var label = get_node("Label" + str(i))

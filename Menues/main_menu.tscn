@@ -16,6 +16,7 @@ offset_left = 501.0
 offset_top = 240.0
 offset_right = 705.0
 offset_bottom = 298.0
+focus_neighbor_bottom = NodePath("../Highscore")
 text = "Play"
 
 [node name="Highscore" type="Button" parent="."]
@@ -23,6 +24,8 @@ offset_left = 501.0
 offset_top = 320.0
 offset_right = 705.0
 offset_bottom = 378.0
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Tutorial")
 text = "Highscore"
 
 [node name="Tutorial" type="Button" parent="."]
@@ -30,6 +33,8 @@ offset_left = 501.0
 offset_top = 400.0
 offset_right = 705.0
 offset_bottom = 458.0
+focus_neighbor_top = NodePath("../Highscore")
+focus_neighbor_bottom = NodePath("../Exit")
 text = "Tutorial"
 
 [node name="Exit" type="Button" parent="."]
@@ -37,6 +42,7 @@ offset_left = 501.0
 offset_top = 480.0
 offset_right = 705.0
 offset_bottom = 538.0
+focus_neighbor_top = NodePath("../Tutorial")
 text = "Exit"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

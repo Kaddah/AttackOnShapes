@@ -1,5 +1,8 @@
 extends CanvasLayer
 
+func _ready():
+	$Play.grab_focus()
+
 func _on_exit_pressed():
 	get_tree().quit()
 
